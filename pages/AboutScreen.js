@@ -123,11 +123,9 @@ export default function AboutScreen() {
           }
         </View>
 
-        <Text style={styles.nameText}>Budi Santoso</Text>
-        <Text style={styles.nimText}>NIM: 0325260031</Text>
-        <Text style={styles.programText}>
-          Teknologi Rekayasa Perangkat Lunak
-        </Text>
+        <Text style={styles.nameText}>Achmad Fauzan Alfitrah</Text>
+        <Text style={styles.nimText}>NIM: 0320240002</Text>
+        <Text style={styles.programText}>Manajemen informatika</Text>
 
         <TouchableOpacity
           style={styles.button}
