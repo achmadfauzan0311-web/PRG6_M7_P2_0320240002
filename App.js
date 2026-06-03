@@ -319,6 +319,7 @@ import LoginScreen from "./pages/LoginScreen";
 import HomeScreen from "./pages/HomeScreen";
 import HistoryScreen from "./pages/HistoryScreen";
 import DetailScreen from "./pages/DetailScreen";
+import AboutScreen from "./pages/AboutScreen";
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -366,7 +367,17 @@ function AppTabs() {
         options={{
           tabBarLabel: "Riwayat",
           tabBarIcon: ({ color }) => (
-            <MaterialIcons name="history" size={24} color={color} />
+            <MaterialIcons name="profil" size={24} color={color} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Profil"
+        component={AboutScreen}
+        options={{
+          tabBarLabel: "Profil",
+          tabBarIcon: ({ color }) => (
+            <MaterialIcons name="person" size={24} color={color} />
           ),
         }}
       />
@@ -395,7 +406,9 @@ function MainApp() {
 
   return (
     <NavigationContainer>
-      {userData ? <AppTabs /> : <AuthStack />}
+      {userData ?
+        <AppTabs />
+      : <AuthStack />}
     </NavigationContainer>
   );
 }
